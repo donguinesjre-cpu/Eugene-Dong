@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Eugene Donguines — Computer Engineering portfolio featuring embedded systems and web development.">
+  <title>Eugene Donguines | Computer Engineering</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="header">
+    <a href="#home" class="brand">
+      <span class="brand-icon">&lt;/&gt;</span>
+      <span>ED<span class="mint">.</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact" class="nav-button">Let's connect ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <div class="hero-content reveal">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          COMPUTER ENGINEERING STUDENT
+        </div>
+
+        <p class="mono hero-label">HELLO, WORLD! I'M</p>
+
+        <h1>Eugene<br>
+          <span class="gradient-text">Donguines.</span>
+        </h1>
+
+        <h2 class="hero-subtitle">
+          Aspiring Computer Engineer
+        </h2>
+
+        <p class="hero-description">
+          I explore the connection between hardware and software,
+          building practical solutions through embedded systems,
+          programming, and creative web development.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="button button-primary">
+            Explore my projects <span>↘</span>
+          </a>
+          <a href="#contact" class="button button-outline">
+            Contact me <span>↗</span>
+          </a>
+        </div>
+
+        <div class="stats">
+          <div>
+            <strong>04</strong>
+            <span>Featured projects</span>
+          </div>
+          <div>
+            <strong>COE</strong>
+            <span>Course</span>
+          </div>
+          <div>
+            <strong>∞</strong>
+            <span>Curiosity</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROFILE PHOTO -->
+      <div class="hero-visual reveal">
+        <div class="visual-header">
+          <span><i class="status-dot"></i> SYSTEM ONLINE</span>
+          <span>PROFILE_01</span>
+        </div>
+
+        <div class="portrait">
+          <div class="portrait-ring"></div>
+
+          <img
+            src="images/eugene.jpg"
+            alt="Eugene Donguines profile photo"
+            class="profile-photo"
+            id="profilePhoto"
+          >
+
+          <div class="photo-fallback" id="photoFallback">
+            <div class="initials">ED</div>
+            <strong>YOUR PROFILE PHOTO</strong>
+            <span>Add your image to<br>images/profile.jpg</span>
+          </div>
+
+          <span class="corner corner-top"></span>
+          <span class="corner corner-bottom"></span>
+        </div>
+
+        <div class="floating-card card-top">
+          <span class="float-icon">&lt;/&gt;</span>
+          <div>
+            <strong>Problem solver</strong>
+            <small>Curious by design</small>
+          </div>
+        </div>
+
+        <div class="floating-card card-bottom">
+          <span class="pulse"></span>
+          <div>
+            <strong>Always learning</strong>
+            <small>Hardware + software</small>
+          </div>
+        </div>
+
+        <div class="visual-footer mono">
+          <span>FIG. 01</span>
+          <span>ENGINEER IN PROGRESS</span>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue">
+        <span></span> SCROLL TO EXPLORE
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="section-heading reveal">
+        <p class="section-label">01 / ABOUT ME</p>
+        <h2>Curiosity is my<br>
+          <span class="muted">favorite tool.</span>
+        </h2>
+      </div>
+
+      <div class="about-content reveal">
+        <p class="lead">
+          I enjoy understanding how technology works — from a
+          circuit on a breadboard to an interface on a screen.
+        </p>
+
+        <p>
+          As a Computer Engineering student, I am developing my
+          knowledge of programming, digital systems, electronics,
+          and software development. I enjoy turning ideas into
+          practical projects, experimenting with new technologies,
+          and learning from every challenge.
+        </p>
+
+        <div class="tags">
+          <span>Embedded Systems</span>
+          <span>Web Development</span>
+          <span>IoT Concepts</span>
+          <span>Problem Solving</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section skills" id="skills">
+      <div class="section-heading reveal">
+        <p class="section-label">02 / TECHNICAL TOOLKIT</p>
+        <h2>Learning the tools<br>
+          <span class="muted">behind innovation.</span>
+        </h2>
+      </div>
+
+      <div class="skill-grid">
+        <article class="skill-card reveal">
+          <div class="skill-icon">⌁</div>
+          <h3>Hardware & Embedded</h3>
+          <p>
+            Working with microcontrollers, sensors, electronic
+            components, and hardware interfaces.
+          </p>
+          <div class="tags">
+            <span>ESP32</span>
+            <span>Arduino</span>
+            <span>GPIO</span>
+            <span>SPI / I²C</span>
+            <span>Sensors</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-icon">&lt;/&gt;</div>
+          <h3>Programming</h3>
+          <p>
+            Developing program logic and building interactive
+            applications through code.
+          </p>
+          <div class="tags">
+            <span>C / C++</span>
+            <span>Python</span>
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-icon">▦</div>
+          <h3>Engineering Tools</h3>
+          <p>
+            Creating technical diagrams, organizing code, and
+            presenting engineering concepts clearly.
+          </p>
+          <div class="tags">
+            <span>VS Code</span>
+            <span>AutoCAD</span>
+            <span>EasyEDA</span>
+            <span>Git / GitHub</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="skills-note">
+        ✳ Skills shown reflect areas of study and practice.
+        Update them as you gain more experience.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects-section" id="projects">
+      <div class="section project-container">
+        <div class="projects-heading reveal">
+          <div>
+            <p class="section-label">03 / SELECTED WORK</p>
+            <h2>Ideas turned into<br>
+              <span class="muted">meaningful projects.</span>
+            </h2>
+          </div>
+          <p>
+            Projects that explore embedded systems, useful
+            applications, and thoughtful digital experiences.
+          </p>
+        </div>
+
+        <div class="project-grid">
+
+          <!-- VEROSCALE -->
+          <article class="project-card project-feature reveal">
+            <div class="project-art veroscale-art">
+              <span class="art-label">01 / SMART HARDWARE</span>
+              <div class="scale-device">
+                <div class="scale-screen">
+                  <small>FOOD ANALYSIS</small>
+                  <strong>248 <em>kcal</em></strong>
+                  <div class="screen-bars">
+                    <i></i><i></i><i></i>
+                  </div>
+                </div>
+                <div class="scale-platform"></div>
+              </div>
+              <span class="art-caption">WEIGHT · DATA · NUTRITION</span>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span>EMBEDDED SYSTEMS</span><span>01</span>
+              </div>
+              <h3>VeroScale</h3>
+              <p>
+                A smart food scale concept for gym enthusiasts.
+                It uses a load sensor to measure food weight and
+                provides estimated nutritional information based
+                on the selected food type.
+              </p>
+              <div class="tags">
+                <span>ESP32</span>
+                <span>HX711 + Load Cell</span>
+                <span>TFT Display</span>
+                <span>Nutrition Data</span>
+              </div>
+              <div class="project-footer">
+                <span>Hardware meets health tracking</span>
+                <span class="mint">↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- MEDI BOX -->
+          <article class="project-card reveal">
+            <div class="project-art medi-art">
+              <span class="art-label">02 / CONNECTED CARE</span>
+              <div class="medical-box">
+                <div class="medical-cross">+</div>
+                <div class="medical-screen">
+                  <i></i><i></i><i></i>
+                </div>
+                <span class="led"></span>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span>EMBEDDED SYSTEMS</span><span>02</span>
+              </div>
+              <h3>Medi Box</h3>
+              <p>
+                An ESP32-controlled smart medical box concept
+                designed to support organized medicine storage
+                and reminder functions using embedded hardware.
+              </p>
+              <div class="tags">
+                <span>ESP32</span>
+                <span>Embedded Control</span>
+                <span>Reminder Logic</span>
+              </div>
+              <div class="project-footer">
+                <span>Technology for daily routines</span>
+                <span class="mint">↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- AGRI-MARKET -->
+          <article class="project-card reveal">
+            <div class="project-art agri-art">
+              <span class="art-label">03 / DIGITAL COMMERCE</span>
+              <div class="produce-card">
+                <span class="fruit fruit-one">✦</span>
+                <span class="fruit fruit-two">✿</span>
+                <span class="fruit fruit-three">●</span>
+                <div class="produce-lines"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span>WEB DEVELOPMENT</span><span>03</span>
+              </div>
+              <h3>Agri-Market</h3>
+              <p>
+                An online marketplace for fruits and vegetables.
+                The concept focuses on browsing fresh produce
+                through a clear, accessible digital storefront.
+              </p>
+              <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>E-commerce UI</span>
+              </div>
+              <div class="project-footer">
+                <span>A simpler way to shop fresh</span>
+                <span class="mint">↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ECHOES OF US -->
+          <article class="project-card reveal">
+            <div class="project-art echoes-art">
+              <span class="art-label">04 / DIGITAL STORYTELLING</span>
+              <div class="memory-stack">
+                <div class="memory memory-back">✳</div>
+                <div class="memory memory-mid">✦</div>
+                <div class="memory memory-front">
+                  <span>the good<br>old days</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span>INTERACTIVE WEB DESIGN</span><span>04</span>
+              </div>
+              <h3>Echoes of Us</h3>
+              <p>
+                An interactive digital scrapbook for a circle of
+                friends, featuring photo albums, a memory timeline,
+                personal stories, and favorite shared moments.
+              </p>
+              <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Interactive UI</span>
+              </div>
+              <div class="project-footer">
+                <span>Memories, made meaningful</span>
+                <span class="mint">↗</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="project-note">
+          Project visuals are illustrative. Add actual prototype
+          photos, screenshots, and repository links when available.
+        </p>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="section journey" id="journey">
+      <div class="section-heading reveal">
+        <p class="section-label">04 / MY JOURNEY</p>
+        <h2>Learn. Build.<br>
+          <span class="muted">Improve.</span>
+        </h2>
+      </div>
+
+      <div class="journey-list">
+        <article class="journey-item reveal">
+          <span class="journey-number">01</span>
+          <div>
+            <span class="section-label">FOUNDATIONS</span>
+            <h3>Understand the fundamentals</h3>
+            <p>
+              Strengthening my knowledge of programming,
+              electronics, digital logic, and computer systems.
+            </p>
+          </div>
+        </article>
+
+        <article class="journey-item reveal">
+          <span class="journey-number">02</span>
+          <div>
+            <span class="section-label">EXPERIMENTATION</span>
+            <h3>Build, test, and troubleshoot</h3>
+            <p>
+              Applying classroom concepts through prototypes,
+              software projects, and practical problem-solving.
+            </p>
+          </div>
+        </article>
+
+        <article class="journey-item reveal">
+          <span class="journey-number">03</span>
+          <div>
+            <span class="section-label">WHAT'S NEXT</span>
+            <h3>Keep exploring technology</h3>
+            <p>
+              Growing my skills in embedded development,
+              connected devices, and reliable software systems.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="section contact-inner reveal">
+        <p class="section-label">05 / GET IN TOUCH</p>
+        <h2>Have an idea?<br>
+          <span class="gradient-text">Let's build it.</span>
+        </h2>
+        <p>
+          I'm open to learning opportunities, project
+          collaborations, and conversations about technology.
+        </p>
+
+        <div class="hero-actions centered">
+          <a class="button button-primary"
+             href="mailto:your.donguinesjre@gmail.com">
+            Email me <span>↗</span>
+          </a>
+          <a class="button button-outline"
+             href="https://github.com/donguinesjre-cpu" target="_blank"
+             rel="noopener noreferrer">
+            Visit GitHub <span>↗</span>
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-symbol">✳</span>
+          <div>
+            <strong>Let's connect</strong>
+            <small>Replace the sample links with your real details.</small>
+          </div>
+          <span class="mint">↗</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section">
+    <a href="#home" class="brand">
+      <span class="brand-icon">&lt;/&gt;</span>
+      <span>ED<span class="mint">.</span></span>
+    </a>
+    <p>Designed with curiosity. Built one line at a time.</p>
+    <span class="mono copyright">
+      © <span id="year"></span> EUGENE DONGUINES
+    </span>
+  </footer>
+
+</body>
+</html>
