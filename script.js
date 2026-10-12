@@ -1,7 +1,4 @@
 
-/* =========================================
-   PORTFOLIO INTERACTIONS
-========================================= */
 
 // Mobile navigation
 const menuToggle = document.getElementById("menuToggle");
