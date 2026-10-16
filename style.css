@@ -10,10 +10,10 @@
 ========================================================= */
 
 :root {
-    --bg: #0b0f14;
-    --bg-soft: #10161e;
-    --bg-card: #121a23;
-    --bg-card-hover: #17232d;
+    --bg: #07111f;
+    --bg-soft: #0b1726;
+    --bg-card: #101d2b;
+    --bg-card-hover: #142638;
 
     --text: #edf3f4;
     --text-soft: #a5b2bd;
@@ -606,6 +606,206 @@ ol {
     box-shadow:
         0 0 0 7px rgba(117, 240, 196, 0.025),
         0 22px 65px rgba(0, 0, 0, 0.4);
+}
+
+.robot-button {
+    position: absolute;
+    top: -69px;
+    right: -16px;
+    z-index: 7;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+
+    padding: 4px 6px;
+    background: transparent;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.robot-button:hover .robot-label {
+    border-color: var(--mint);
+    color: #ffffff;
+}
+
+.robot-label {
+    padding: 3px 7px;
+    background: rgba(10, 17, 23, 0.96);
+    border: 1px solid rgba(117, 240, 196, 0.38);
+    border-radius: 999px;
+    color: var(--mint);
+    font-family: var(--font-mono);
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: color var(--transition), border-color var(--transition);
+}
+
+.robot-mascot {
+    position: relative;
+    display: block;
+    width: 62px;
+    height: 59px;
+    transform: scale(1.04);
+    transform-origin: center bottom;
+    filter: drop-shadow(0 5px 9px rgba(0, 0, 0, 0.35));
+    animation: profile-robot-walk 2.4s ease-in-out infinite;
+}
+
+.robot-head {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    width: 42px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    background: linear-gradient(145deg, #e8f7f5, #91bbb6);
+    border: 2px solid #75f0c4;
+    border-radius: 11px 11px 9px 9px;
+    box-shadow: 0 0 12px rgba(117, 240, 196, 0.2);
+}
+
+.robot-antenna {
+    position: absolute;
+    top: 4px;
+    left: 30px;
+    width: 2px;
+    height: 8px;
+    background: var(--mint);
+}
+
+.robot-antenna-tip {
+    position: absolute;
+    top: 0;
+    left: 27px;
+    width: 8px;
+    height: 8px;
+    background: var(--mint);
+    border-radius: 50%;
+    box-shadow: 0 0 9px rgba(117, 240, 196, 0.8);
+}
+
+.robot-eye {
+    width: 5px;
+    height: 7px;
+    background: #18343b;
+    border-radius: 50%;
+}
+
+.robot-mouth {
+    position: absolute;
+    bottom: 4px;
+    left: 17px;
+    width: 8px;
+    height: 3px;
+    background: #34766b;
+    border-radius: 0 0 5px 5px;
+}
+
+.robot-body {
+    position: absolute;
+    top: 39px;
+    left: 18px;
+    z-index: 2;
+    width: 26px;
+    height: 16px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(145deg, #d8efed, #789f9d);
+    border: 2px solid #75f0c4;
+    border-radius: 6px;
+}
+
+.robot-core {
+    width: 7px;
+    height: 7px;
+    background: var(--mint);
+    border-radius: 2px;
+    box-shadow: 0 0 7px rgba(117, 240, 196, 0.8);
+}
+
+.robot-arm {
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    width: 7px;
+    height: 14px;
+    background: #a7d0ca;
+    border: 1px solid #75f0c4;
+    border-radius: 5px;
+    transform-origin: 50% 2px;
+}
+
+.robot-arm-left {
+    left: 11px;
+    transform: rotate(18deg);
+    animation: profile-robot-arm-swing 0.6s ease-in-out infinite alternate;
+}
+
+.robot-arm-right {
+    right: 11px;
+    transform: rotate(-18deg);
+    animation: profile-robot-arm-swing 0.6s ease-in-out infinite alternate-reverse;
+}
+
+.robot-leg {
+    position: absolute;
+    top: 52px;
+    z-index: 1;
+    width: 7px;
+    height: 6px;
+    background: #a7d0ca;
+    border: 1px solid #75f0c4;
+    border-radius: 0 0 3px 3px;
+}
+
+.robot-leg-left {
+    left: 22px;
+    transform-origin: center top;
+    animation: profile-robot-leg-step 0.3s ease-in-out infinite alternate;
+}
+
+.robot-leg-right {
+    right: 22px;
+    transform-origin: center top;
+    animation: profile-robot-leg-step 0.3s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes profile-robot-walk {
+    0%,
+    100% {
+        translate: -8px 0;
+    }
+    50% {
+        translate: 8px -3px;
+    }
+}
+
+@keyframes profile-robot-arm-swing {
+    from {
+        rotate: -22deg;
+    }
+    to {
+        rotate: 22deg;
+    }
+}
+
+@keyframes profile-robot-leg-step {
+    from {
+        rotate: -25deg;
+    }
+    to {
+        rotate: 25deg;
+    }
 }
 
 .profile-frame-label {
@@ -2740,5 +2940,482 @@ button:focus-visible {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+}
+
+/* Animated circuit-board atmosphere */
+body {
+    isolation: isolate;
+}
+
+body::before,
+body::after {
+    position: fixed;
+    z-index: -1;
+    content: "";
+    pointer-events: none;
+}
+
+body::before {
+    inset: -72px;
+    background-image:
+        linear-gradient(rgba(117, 240, 196, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(117, 240, 196, 0.045) 1px, transparent 1px),
+        radial-gradient(
+            circle,
+            rgba(219, 250, 255, 0.9) 0 1px,
+            rgba(118, 210, 255, 0.5) 1.5px,
+            rgba(118, 183, 255, 0.08) 4px,
+            transparent 5px
+        ),
+        linear-gradient(
+            90deg,
+            transparent 0 71px,
+            rgba(117, 240, 196, 0.055) 71px 72px,
+            transparent 72px
+        ),
+        linear-gradient(
+            180deg,
+            transparent 0 71px,
+            rgba(117, 240, 196, 0.055) 71px 72px,
+            transparent 72px
+        ),
+        radial-gradient(
+            circle,
+            rgba(232, 255, 248, 0.95) 0 1px,
+            rgba(117, 255, 210, 0.75) 1.5px 2.5px,
+            rgba(117, 240, 196, 0.12) 5px,
+            transparent 6px
+        ),
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(117, 240, 196, 0.012) 49.6%,
+            rgba(117, 240, 196, 0.075) 50%,
+            rgba(117, 240, 196, 0.012) 50.4%,
+            transparent 51%
+        );
+    background-size:
+        72px 72px,
+        72px 72px,
+        144px 144px,
+        144px 144px,
+        144px 144px,
+        144px 144px,
+        100% 200vh;
+    background-position:
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        0 0,
+        72px 72px,
+        0 0;
+    background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat-y;
+    mask-image: radial-gradient(ellipse at center, #000 20%, rgba(0, 0, 0, 0.7) 72%, transparent 110%);
+    opacity: 0.62;
+    animation:
+        circuit-grid-drift 42s linear infinite,
+        circuit-node-flow 6s linear infinite,
+        circuit-node-spark 1.8s ease-in-out infinite alternate;
+}
+
+body::after {
+    inset: -20%;
+    background:
+        radial-gradient(ellipse at 25% 35%, rgba(117, 240, 196, 0.11), transparent 34%),
+        radial-gradient(ellipse at 76% 68%, rgba(118, 183, 255, 0.1), transparent 32%),
+        radial-gradient(ellipse at 60% 16%, rgba(185, 154, 255, 0.045), transparent 26%),
+        linear-gradient(
+            90deg,
+            transparent 0 38%,
+            rgba(117, 240, 196, 0.12) 44%,
+            rgba(117, 240, 196, 0.9) 49%,
+            rgba(223, 255, 245, 0.95) 50%,
+            rgba(117, 240, 196, 0.55) 52%,
+            transparent 60% 100%
+        ),
+        linear-gradient(
+            180deg,
+            transparent 0 38%,
+            rgba(118, 183, 255, 0.12) 44%,
+            rgba(118, 183, 255, 0.85) 49%,
+            rgba(229, 244, 255, 0.95) 50%,
+            rgba(118, 183, 255, 0.5) 52%,
+            transparent 60% 100%
+        );
+    background-size:
+        100% 100%,
+        100% 100%,
+        100% 100%,
+        520px 2px,
+        2px 520px;
+    background-position:
+        center,
+        center,
+        center,
+        0 144px,
+        144px 0;
+    background-repeat:
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        repeat-x,
+        repeat-y;
+    filter: blur(13px);
+    opacity: 0.85;
+    animation:
+        circuit-ambient-drift 24s ease-in-out infinite alternate,
+        circuit-current-flow 8s linear infinite;
+}
+
+@keyframes circuit-grid-drift {
+    to {
+        transform: translate3d(72px, 72px, 0);
+    }
+}
+
+@keyframes circuit-node-flow {
+    to {
+        background-position:
+            0 0,
+            0 0,
+            144px 0,
+            0 0,
+            0 0,
+            72px 216px,
+            0 0;
+    }
+}
+
+@keyframes circuit-node-spark {
+    from {
+        filter: brightness(0.88) drop-shadow(0 0 1px rgba(117, 240, 196, 0.14));
+    }
+    to {
+        filter: brightness(1.2) drop-shadow(0 0 5px rgba(117, 240, 196, 0.38));
+    }
+}
+
+@keyframes circuit-ambient-drift {
+    to {
+        transform: translate3d(4%, -3%, 0) scale(1.04);
+    }
+}
+
+@keyframes circuit-current-flow {
+    to {
+        background-position:
+            center,
+            center,
+            center,
+            520px 144px,
+            144px 520px;
+    }
+}
+
+/* PCB-inspired surfaces and restrained signal glow */
+.site-header {
+    background-color: rgba(7, 17, 31, 0.88);
+    border-bottom-color: rgba(117, 240, 196, 0.18);
+}
+
+.hero-visual,
+.about-main,
+.stat-card,
+.skill-card,
+.project-card,
+.contact-panel {
+    background-color: rgba(13, 27, 42, 0.94);
+    border-color: rgba(117, 240, 196, 0.16);
+}
+
+.stat-card:hover,
+.skill-card:hover,
+.project-card:hover,
+.contact-panel:hover {
+    border-color: rgba(117, 240, 196, 0.52);
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.24),
+        0 0 26px rgba(117, 240, 196, 0.09);
+}
+
+.btn-primary,
+.nav .nav-contact,
+.project-link {
+    box-shadow: 0 0 18px rgba(117, 240, 196, 0.08);
+}
+
+.btn-primary:hover,
+.nav .nav-contact:hover,
+.project-link:hover {
+    box-shadow: 0 0 24px rgba(117, 240, 196, 0.2);
+}
+
+.section-number,
+.small-label,
+.skill-icon,
+.status-dot {
+    filter: drop-shadow(0 0 7px rgba(117, 240, 196, 0.2));
+}
+
+/* Blueprint drafting details for the contact area */
+.contact-panel {
+    border-color: rgba(91, 205, 236, 0.3);
+    background:
+        linear-gradient(rgba(91, 205, 236, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(91, 205, 236, 0.035) 1px, transparent 1px),
+        radial-gradient(ellipse at 90% 8%, rgba(25, 132, 170, 0.14), transparent 44%),
+        linear-gradient(135deg, rgba(7, 20, 34, 0.97), rgba(9, 19, 34, 0.97));
+    background-size: 24px 24px, 24px 24px, auto, auto;
+    box-shadow:
+        0 22px 70px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(91, 205, 236, 0.055);
+}
+
+.contact-panel::before {
+    position: absolute;
+    inset: 13px;
+    z-index: 1;
+    border: 1px solid rgba(91, 205, 236, 0.12);
+    border-radius: calc(var(--radius-lg) - 8px);
+    background:
+        linear-gradient(90deg, rgba(91, 205, 236, 0.38), rgba(91, 205, 236, 0.38)) top left / 34px 1px no-repeat,
+        linear-gradient(rgba(91, 205, 236, 0.38), rgba(91, 205, 236, 0.38)) top left / 1px 34px no-repeat,
+        linear-gradient(270deg, rgba(91, 205, 236, 0.38), rgba(91, 205, 236, 0.38)) top right / 34px 1px no-repeat,
+        linear-gradient(rgba(91, 205, 236, 0.38), rgba(91, 205, 236, 0.38)) top right / 1px 34px no-repeat,
+        linear-gradient(90deg, rgba(91, 205, 236, 0.38), rgba(91, 205, 236, 0.38)) bottom left / 34px 1px no-repeat,
+        linear-gradient(0deg, rgba(91, 205, 236, 0.38), rgba(91, 205, 236, 0.38)) bottom left / 1px 34px no-repeat,
+        linear-gradient(270deg, rgba(91, 205, 236, 0.38), rgba(91, 205, 236, 0.38)) bottom right / 34px 1px no-repeat,
+        linear-gradient(0deg, rgba(91, 205, 236, 0.38), rgba(91, 205, 236, 0.38)) bottom right / 1px 34px no-repeat;
+    content: "";
+    pointer-events: none;
+}
+
+.contact-panel > *:not(.contact-decoration) {
+    z-index: 2;
+}
+
+.contact-decoration {
+    z-index: 1;
+}
+
+.contact-orbit {
+    border-color: rgba(91, 205, 236, 0.22);
+}
+
+.contact-orbit::before {
+    border-color: rgba(91, 205, 236, 0.16);
+}
+
+.contact-panel {
+    padding-bottom: 112px;
+}
+
+.contact-walkway {
+    position: absolute;
+    right: 14px;
+    left: 14px;
+    bottom: 12px;
+    z-index: 2;
+    height: 66px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(91, 205, 236, 0.28);
+    pointer-events: none;
+}
+
+.contact-walkway::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(91, 205, 236, 0.38) 0 1px,
+        transparent 1px 12px
+    );
+    content: "";
+}
+
+.contact-walker {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 42px;
+    height: 56px;
+    animation: contact-bot-walk 9s ease-in-out infinite alternate;
+}
+
+.contact-bot-head {
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    z-index: 2;
+    width: 29px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    background: linear-gradient(145deg, #e8f7f5, #91bbb6);
+    border: 1.5px solid var(--mint);
+    border-radius: 8px 8px 7px 7px;
+    box-shadow: 0 0 12px rgba(117, 240, 196, 0.25);
+}
+
+.contact-bot-antenna {
+    position: absolute;
+    top: 3px;
+    left: 20px;
+    width: 2px;
+    height: 7px;
+    background: var(--mint);
+}
+
+.contact-bot-antenna::after {
+    position: absolute;
+    top: -3px;
+    left: -2px;
+    width: 6px;
+    height: 6px;
+    background: var(--mint);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(117, 240, 196, 0.7);
+    content: "";
+}
+
+.contact-bot-head > span {
+    width: 4px;
+    height: 6px;
+    background: #18343b;
+    border-radius: 50%;
+}
+
+.contact-bot-head::after {
+    position: absolute;
+    bottom: 3px;
+    left: 12px;
+    width: 6px;
+    height: 2px;
+    background: #34766b;
+    border-radius: 0 0 4px 4px;
+    content: "";
+}
+
+.contact-bot-body {
+    position: absolute;
+    top: 31px;
+    left: 12px;
+    z-index: 2;
+    width: 19px;
+    height: 15px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(145deg, #d8efed, #789f9d);
+    border: 1.5px solid var(--mint);
+    border-radius: 5px;
+}
+
+.contact-bot-body > span {
+    width: 5px;
+    height: 5px;
+    background: var(--mint);
+    border-radius: 2px;
+    box-shadow: 0 0 6px rgba(117, 240, 196, 0.8);
+}
+
+.contact-bot-arm,
+.contact-bot-leg {
+    position: absolute;
+    z-index: 1;
+    width: 5px;
+    background: #a7d0ca;
+    border: 1px solid var(--mint);
+}
+
+.contact-bot-arm {
+    top: 32px;
+    height: 13px;
+    border-radius: 4px;
+    transform-origin: 50% 2px;
+}
+
+.contact-bot-arm-left {
+    left: 7px;
+    transform: rotate(20deg);
+}
+
+.contact-bot-arm-right {
+    top: 30px;
+    right: 5px;
+    height: 14px;
+    transform: rotate(-20deg);
+    animation: contact-bot-wave 0.75s ease-in-out infinite alternate;
+}
+
+.contact-bot-leg {
+    top: 44px;
+    height: 9px;
+    border-radius: 0 0 3px 3px;
+    transform-origin: 50% 1px;
+}
+
+.contact-bot-leg-left {
+    left: 15px;
+    animation: contact-bot-step 0.38s ease-in-out infinite alternate;
+}
+
+.contact-bot-leg-right {
+    right: 13px;
+    animation: contact-bot-step 0.38s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes contact-bot-walk {
+    to {
+        left: calc(100% - 42px);
+    }
+}
+
+@keyframes contact-bot-wave {
+    from {
+        transform: rotate(-20deg);
+    }
+    to {
+        transform: rotate(-105deg);
+    }
+}
+
+@keyframes contact-bot-step {
+    from {
+        transform: rotate(22deg);
+    }
+    to {
+        transform: rotate(-22deg);
+    }
+}
+
+@media (max-width: 760px) {
+    .contact-panel {
+        padding-bottom: 105px;
+    }
+
+    .contact-walkway {
+        right: 14px;
+        left: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    body::after {
+        animation: none;
+    }
+
+    .contact-walker,
+    .contact-bot-arm-right,
+    .contact-bot-leg-left,
+    .contact-bot-leg-right {
+        animation: none;
     }
 }

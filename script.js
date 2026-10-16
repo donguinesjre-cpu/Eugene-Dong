@@ -35,6 +35,44 @@ if (profilePhoto.complete && profilePhoto.naturalWidth === 0) {
   showPhotoFallback();
 }
 
+// Animate the robot when it is clicked, unless reduced motion is preferred.
+const robotButton = document.getElementById("robotButton");
+const robotMascot = robotButton.querySelector(".robot-mascot");
+const robotArm = robotButton.querySelector(".robot-arm-right");
+let robotClickAnimations = [];
+
+robotButton.addEventListener("click", () => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  robotClickAnimations.forEach((animation) => animation.cancel());
+
+  robotClickAnimations = [
+    robotMascot.animate(
+      [
+        { transform: "translateY(0) rotate(0) scale(1.04)" },
+        { transform: "translateY(-11px) rotate(-8deg) scale(1.13)" },
+        { transform: "translateY(0) rotate(7deg) scale(1.04)" },
+        { transform: "translateY(-5px) rotate(-4deg) scale(1.08)" },
+        { transform: "translateY(0) rotate(0) scale(1.04)" },
+      ],
+      { duration: 760, easing: "cubic-bezier(0.34, 1.56, 0.64, 1)" }
+    ),
+
+    robotArm.animate(
+      [
+        { transform: "rotate(-18deg)" },
+        { transform: "rotate(-100deg)" },
+        { transform: "rotate(-45deg)" },
+        { transform: "rotate(-100deg)" },
+        { transform: "rotate(-18deg)" },
+      ],
+      { duration: 650, easing: "ease-in-out" }
+    ),
+  ];
+});
+
 // Reveal elements when they enter the viewport
 const revealItems = document.querySelectorAll(".reveal");
 
