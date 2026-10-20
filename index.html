@@ -10,7 +10,7 @@
         content="Eugene Donguines — Computer Engineering student portfolio featuring embedded systems, web development, and innovative engineering projects."
     >
 
-    <meta name="theme-color" content="#0b0f14">
+    <meta name="theme-color" content="#171316">
     <title>Eugene Donguines | Computer Engineering Portfolio</title>
 
     <!-- Google Fonts -->
@@ -30,6 +30,84 @@
 </head>
 
 <body>
+
+    <section
+        class="portfolio-intro"
+        id="portfolioIntro"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="introTitle"
+        aria-describedby="introDescription"
+        aria-hidden="true"
+    >
+        <svg class="intro-circuit" viewBox="0 0 1440 900" aria-hidden="true">
+            <path d="M0 190h170l55 55h170m-95 0v95h145m1025-150h-190l-70 70h-150m112 0v100h-170M0 690h160l70-70h140m1070 120h-175l-75-75h-155"/>
+            <path d="M0 335h90l45 45h120m1185-95h-95l-45 45h-125M0 790h215l45-45h120m1060-405h-130l-55 55h-95"/>
+            <circle cx="395" cy="245" r="4"/>
+            <circle cx="1295" cy="260" r="4"/>
+            <circle cx="375" cy="620" r="4"/>
+            <circle cx="1045" cy="715" r="4"/>
+        </svg>
+
+        <div class="intro-frame">
+            <div class="intro-topline">
+                <span><span class="intro-live-dot"></span> SYSTEM INITIALIZING...</span>
+                <span class="intro-build">NEXUS BOOT SEQUENCE / 01</span>
+            </div>
+
+            <div class="intro-content">
+                <div class="intro-emblem" aria-hidden="true">
+                    <span class="intro-emblem-core">N</span>
+                </div>
+
+                <p class="intro-kicker">COMPUTER ENGINEERING // DIGITAL PORTFOLIO</p>
+                <h1 id="introTitle">PROJECT <span>NEXUS</span></h1>
+                <h2>Computer Engineering Portfolio</h2>
+                <p class="intro-description" id="introDescription">
+                    A digital space showcasing my journey as a Computer Engineering student, where hardware meets software and ideas become functional projects.
+                </p>
+
+                <p class="intro-specialties">
+                    HARDWARE <span>•</span> SOFTWARE <span>•</span>
+                    EMBEDDED SYSTEMS <span>•</span> WEB DEVELOPMENT
+                </p>
+
+                <div class="intro-progress-section">
+                    <div class="intro-progress-heading">
+                        <span class="intro-status" id="introStatus" aria-live="polite">Initializing portfolio...</span>
+                        <span class="intro-percentage" id="introPercentage">0%</span>
+                    </div>
+                    <div
+                        class="intro-progress-track"
+                        role="progressbar"
+                        aria-label="Portfolio initialization"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="0"
+                        id="introProgress"
+                    >
+                        <span class="intro-progress-fill" id="introProgressFill"></span>
+                    </div>
+                    <div class="intro-terminal" aria-hidden="true">
+                        <span><i>01</i> <b>SYS</b> <span id="introTerminalStatus">Initializing portfolio...</span></span>
+                        <span class="intro-terminal-ready">PROJECT NEXUS <span>ONLINE</span></span>
+                    </div>
+                </div>
+
+                <div class="intro-actions">
+                    <button class="intro-enter" id="introEnter" type="button" hidden>
+                        ENTER PORTFOLIO <span aria-hidden="true">↗</span>
+                    </button>
+                    <button class="intro-skip" id="introSkip" type="button">Skip intro</button>
+                </div>
+            </div>
+
+            <div class="intro-bottomline">
+                <span>HARDWARE // SOFTWARE // HUMAN CURIOSITY</span>
+                <span>EST. <span id="introYear">2026</span></span>
+            </div>
+        </div>
+    </section>
 
     <!-- ================= NAVIGATION ================= -->
 
@@ -312,25 +390,45 @@
                     <div class="about-stat-cards reveal">
 
                         <article class="stat-card">
-                            <span class="stat-icon">&lt;/&gt;</span>
+                            <span class="stat-icon">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg"
+                                    alt="JavaScript logo"
+                                >
+                            </span>
                             <h3>Software</h3>
                             <p>Web development and programming</p>
                         </article>
 
                         <article class="stat-card">
-                            <span class="stat-icon">⌁</span>
+                            <span class="stat-icon">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/arduino/arduino-original.svg"
+                                    alt="Arduino logo"
+                                >
+                            </span>
                             <h3>Hardware</h3>
                             <p>Microcontrollers and electronics</p>
                         </article>
 
                         <article class="stat-card">
-                            <span class="stat-icon">✳</span>
+                            <span class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M9 18h6m-5 3h4m-2-19a7 7 0 0 0-4 12.75c.5.35 1 1.05 1 1.75h6c0-.7.5-1.4 1-1.75A7 7 0 0 0 12 2Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 5v2m-4.2.1 1.4 1.4m7-1.4-1.4 1.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                                </svg>
+                            </span>
                             <h3>Innovation</h3>
                             <p>Ideas developed into prototypes</p>
                         </article>
 
                         <article class="stat-card">
-                            <span class="stat-icon">↗</span>
+                            <span class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M4 19V5m0 14h17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                                    <path d="m7 15 4-4 3 2 6-7m-5 0h5v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
                             <h3>Growth</h3>
                             <p>Learning through experimentation</p>
                         </article>
@@ -351,10 +449,10 @@
             <div class="section-container">
 
                 <div class="section-heading reveal">
-                    <span class="section-number">02 / SKILLS</span>
+                    <span class="section-number">02 / SKILLS EXPLORER</span>
 
                     <h2>
-                        My technical <span class="gradient-text">toolkit.</span>
+                        Explore my technical <span class="gradient-text">toolkit.</span>
                     </h2>
 
                     <p>
@@ -363,11 +461,86 @@
                     </p>
                 </div>
 
+                <div
+                    class="skills-category-list"
+                    role="tablist"
+                    aria-label="Skill categories"
+                >
+                    <button
+                        class="skills-category is-active"
+                        id="skillsTabProgramming"
+                        type="button"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="skillProgramming"
+                        tabindex="0"
+                        data-skill-category="programming"
+                    >
+                        <span class="skills-category-index">01</span>
+                        <span>Programming</span>
+                        <span class="skills-category-arrow" aria-hidden="true">↗</span>
+                    </button>
+                    <button
+                        class="skills-category"
+                        id="skillsTabEmbedded"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="skillEmbedded"
+                        tabindex="-1"
+                        data-skill-category="embedded"
+                    >
+                        <span class="skills-category-index">02</span>
+                        <span>Embedded Systems</span>
+                        <span class="skills-category-arrow" aria-hidden="true">↗</span>
+                    </button>
+                    <button
+                        class="skills-category"
+                        id="skillsTabWeb"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="skillWeb"
+                        tabindex="-1"
+                        data-skill-category="web"
+                    >
+                        <span class="skills-category-index">03</span>
+                        <span>Web Development</span>
+                        <span class="skills-category-arrow" aria-hidden="true">↗</span>
+                    </button>
+                    <button
+                        class="skills-category"
+                        id="skillsTabTools"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="skillTools"
+                        tabindex="-1"
+                        data-skill-category="tools"
+                    >
+                        <span class="skills-category-index">04</span>
+                        <span>Engineering Tools</span>
+                        <span class="skills-category-arrow" aria-hidden="true">↗</span>
+                    </button>
+                </div>
+
                 <div class="skills-grid">
 
-                    <article class="skill-card reveal">
+                    <article
+                        class="skill-card reveal"
+                        id="skillProgramming"
+                        role="tabpanel"
+                        aria-labelledby="skillsTabProgramming"
+                        tabindex="0"
+                        data-skill-panel="programming"
+                    >
                         <div class="skill-card-top">
-                            <span class="skill-icon">&lt;/&gt;</span>
+                            <span class="skill-icon">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg"
+                                    alt="C++ logo"
+                                >
+                            </span>
                             <span class="skill-index">01</span>
                         </div>
 
@@ -378,17 +551,33 @@
                             applications.
                         </p>
 
-                        <div class="tags">
-                            <span>C / C++</span>
-                            <span>JavaScript</span>
-                            <span>HTML</span>
-                            <span>CSS</span>
+                        <div class="skill-details">
+                            <div class="skill-detail">
+                                <h4>C / C++</h4>
+                                <p>Programming languages for implementing application logic and working close to hardware.</p>
+                            </div>
+                            <div class="skill-detail">
+                                <h4>JavaScript</h4>
+                                <p>Adds interactive behavior to websites and browser-based applications.</p>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="skill-card reveal">
+                    <article
+                        class="skill-card reveal"
+                        id="skillEmbedded"
+                        role="tabpanel"
+                        aria-labelledby="skillsTabEmbedded"
+                        tabindex="0"
+                        data-skill-panel="embedded"
+                    >
                         <div class="skill-card-top">
-                            <span class="skill-icon">⌁</span>
+                            <span class="skill-icon">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/arduino/arduino-original.svg"
+                                    alt="Arduino logo"
+                                >
+                            </span>
                             <span class="skill-index">02</span>
                         </div>
 
@@ -399,17 +588,41 @@
                             electronic components.
                         </p>
 
-                        <div class="tags">
-                            <span>ESP32</span>
-                            <span>Arduino</span>
-                            <span>Sensors</span>
-                            <span>GPIO</span>
+                        <div class="skill-details">
+                            <div class="skill-detail">
+                                <h4>ESP32</h4>
+                                <p>A microcontroller platform used in embedded and connected-device projects.</p>
+                            </div>
+                            <div class="skill-detail">
+                                <h4>Arduino</h4>
+                                <p>A platform for programming microcontrollers and prototyping electronics.</p>
+                            </div>
+                            <div class="skill-detail">
+                                <h4>Sensors</h4>
+                                <p>Components that measure physical conditions and provide input to an electronic system.</p>
+                            </div>
+                            <div class="skill-detail">
+                                <h4>GPIO</h4>
+                                <p>General-purpose pins used to read digital inputs and control connected components.</p>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="skill-card reveal">
+                    <article
+                        class="skill-card reveal"
+                        id="skillWeb"
+                        role="tabpanel"
+                        aria-labelledby="skillsTabWeb"
+                        tabindex="0"
+                        data-skill-panel="web"
+                    >
                         <div class="skill-card-top">
-                            <span class="skill-icon">▦</span>
+                            <span class="skill-icon">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg"
+                                    alt="HTML5 logo"
+                                >
+                            </span>
                             <span class="skill-index">03</span>
                         </div>
 
@@ -420,17 +633,41 @@
                             browser-based experiences.
                         </p>
 
-                        <div class="tags">
-                            <span>Responsive UI</span>
-                            <span>DOM</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
+                        <div class="skill-details">
+                            <div class="skill-detail">
+                                <h4>Responsive UI</h4>
+                                <p>Interfaces that adapt their layout to different screen sizes and devices.</p>
+                            </div>
+                            <div class="skill-detail">
+                                <h4>DOM</h4>
+                                <p>The page structure JavaScript can access and update to support interaction.</p>
+                            </div>
+                            <div class="skill-detail">
+                                <h4>HTML</h4>
+                                <p>Structures web-page content using elements such as headings, links, and sections.</p>
+                            </div>
+                            <div class="skill-detail">
+                                <h4>CSS</h4>
+                                <p>Styles web pages and controls their layout, colors, and responsive presentation.</p>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="skill-card reveal">
+                    <article
+                        class="skill-card reveal"
+                        id="skillTools"
+                        role="tabpanel"
+                        aria-labelledby="skillsTabTools"
+                        tabindex="0"
+                        data-skill-panel="tools"
+                    >
                         <div class="skill-card-top">
-                            <span class="skill-icon">⌘</span>
+                            <span class="skill-icon">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg"
+                                    alt="Visual Studio Code logo"
+                                >
+                            </span>
                             <span class="skill-index">04</span>
                         </div>
 
@@ -441,11 +678,23 @@
                             development, and technical work.
                         </p>
 
-                        <div class="tags">
-                            <span>VS Code</span>
-                            <span>GitHub</span>
-                            <span>AutoCAD</span>
-                            <span>Circuit Design</span>
+                        <div class="skill-details">
+                            <div class="skill-detail">
+                                <h4>VS Code</h4>
+                                <p>A code editor for creating and working with software projects.</p>
+                            </div>
+                            <div class="skill-detail">
+                                <h4>GitHub</h4>
+                                <p>A platform for hosting code repositories and collaborating on project changes.</p>
+                            </div>
+                            <div class="skill-detail">
+                                <h4>AutoCAD</h4>
+                                <p>Design and drafting software for creating technical drawings.</p>
+                            </div>
+                            <div class="skill-detail">
+                                <h4>Circuit Design</h4>
+                                <p>Planning how electronic components connect and work together in a circuit.</p>
+                            </div>
                         </div>
                     </article>
 
@@ -489,6 +738,12 @@
                     <article class="project-card project-feature reveal">
 
                         <div class="project-art veroscale-art">
+
+                            <img
+                                class="project-photo"
+                                src="veroscale.png"
+                                alt="VeroScale smart food scale prototype displaying food weight and nutrition information"
+                            >
 
                             <div class="project-art-top">
                                 <span>PROJECT_001</span>
@@ -548,7 +803,7 @@
 
                             <div class="project-footer">
 
-                                <span class="project-number">01 / 04</span>
+                                <span class="project-number">01 / 05</span>
 
                                 <a
                                     class="project-link"
@@ -557,7 +812,7 @@
                                     rel="noopener noreferrer"
                                     aria-label="View VeroScale GitHub repository"
                                 >
-                                   
+                                    View Repository <span>↗</span>
                                 </a>
 
                             </div>
@@ -572,6 +827,12 @@
                     <article class="project-card reveal">
 
                         <div class="project-art medi-art">
+
+                            <img
+                                class="project-photo"
+                                src="medibox.png"
+                                alt="Medi Box prototype with organized medicine compartments, a reminder display, and ESP32 electronics"
+                            >
 
                             <div class="project-art-top">
                                 <span>PROJECT_002</span>
@@ -626,7 +887,7 @@
 
                             <div class="project-footer">
 
-                                <span class="project-number">02 / 04</span>
+                                <span class="project-number">02 / 05</span>
 
                                 <a
                                     class="project-link"
@@ -635,7 +896,7 @@
                                     rel="noopener noreferrer"
                                     aria-label="View Medi Box GitHub repository"
                                 >
-                                    
+                                    View Repository <span>↗</span>
                                 </a>
 
                             </div>
@@ -650,6 +911,12 @@
                     <article class="project-card reveal">
 
                         <div class="project-art agri-art">
+
+                            <img
+                                class="project-photo"
+                                src="agrimarket.png"
+                                alt="Agri-Market produce marketplace displayed on a laptop beside fresh fruits and vegetables"
+                            >
 
                             <div class="project-art-top">
                                 <span>PROJECT_003</span>
@@ -711,7 +978,7 @@
 
                             <div class="project-footer">
 
-                                <span class="project-number">03 / 04</span>
+                                <span class="project-number">03 / 05</span>
 
                                 <a
                                     class="project-link"
@@ -735,6 +1002,12 @@
                     <article class="project-card reveal">
 
                         <div class="project-art echoes-art">
+
+                            <img
+                                class="project-photo"
+                                src="echoes.png"
+                                alt="Echoes of Us digital scrapbook displayed on a laptop with friendship photos and a memory timeline"
+                            >
 
                             <div class="project-art-top">
                                 <span>PROJECT_004</span>
@@ -793,7 +1066,7 @@
 
                             <div class="project-footer">
 
-                                <span class="project-number">04 / 04</span>
+                                <span class="project-number">04 / 05</span>
 
                                 <a
                                     class="project-link"
@@ -805,6 +1078,100 @@
                                     View Repository <span>↗</span>
                                 </a>
 
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <!-- PROJECT 5: DATA COMMUNICATION -->
+
+                    <article class="project-card reveal">
+
+                        <div class="project-art data-communication-art">
+
+                            <img
+                                class="project-photo"
+                                src="datacom.jpg"
+                                alt="Data Communication LAN demonstration with a laptop, Ethernet switch, network cables, and topology notes"
+                            >
+
+                            <div class="project-art-top">
+                                <span>PROJECT_005</span>
+                                <span>NETWORK DESIGN</span>
+                            </div>
+
+                            <svg
+                                class="lan-diagram"
+                                viewBox="0 0 360 180"
+                                role="img"
+                                aria-label="Local area network diagram connecting a router, network switch, computers, and a monitoring station"
+                            >
+                                <g class="lan-connections">
+                                    <path d="M180 42v31M180 94v25M180 83H76v36M180 83h104v36"/>
+                                </g>
+                                <g class="lan-device lan-router">
+                                    <rect x="141" y="15" width="78" height="28" rx="7"/>
+                                    <circle cx="155" cy="29" r="2"/>
+                                    <circle cx="164" cy="29" r="2"/>
+                                    <path d="M177 29h27"/>
+                                    <text x="180" y="11">ROUTER</text>
+                                </g>
+                                <g class="lan-device lan-switch">
+                                    <rect x="141" y="72" width="78" height="23" rx="6"/>
+                                    <circle cx="153" cy="83.5" r="1.5"/>
+                                    <circle cx="163" cy="83.5" r="1.5"/>
+                                    <circle cx="173" cy="83.5" r="1.5"/>
+                                    <circle cx="183" cy="83.5" r="1.5"/>
+                                    <circle cx="193" cy="83.5" r="1.5"/>
+                                    <circle cx="203" cy="83.5" r="1.5"/>
+                                </g>
+                                <g class="lan-device lan-client">
+                                    <rect x="44" y="119" width="64" height="37" rx="5"/>
+                                    <path d="M56 128h40v23H56zM70 156v5m12-5v5m-16 0h20"/>
+                                    <text x="76" y="174">CLIENTS</text>
+                                </g>
+                                <g class="lan-device lan-monitor">
+                                    <rect x="252" y="119" width="64" height="37" rx="5"/>
+                                    <path d="M264 128h40v23h-40zM278 156v5m12-5v5m-16 0h20"/>
+                                    <path d="m270 143 7-7 6 4 10-9"/>
+                                    <text x="284" y="174">MONITORING</text>
+                                </g>
+                            </svg>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-category">
+                                <span class="category-dot"></span>
+                                DATA COMMUNICATION
+                            </div>
+
+                            <h3>Data Communication</h3>
+
+                            <p>
+                                Local Area Network (LAN) Design prepared for a Data Communication. It provides a structured guide on how to set up and configure a LAN, including cabling, IP address assignments, and central monitoring considerations.
+                            </p>
+
+                            <div class="tags">
+                                <span>LAN</span>
+                                <span>Network Design</span>
+                                <span>IP Addressing</span>
+                                <span>Central Monitoring</span>
+                            </div>
+
+                            <div class="project-footer">
+                                <span class="project-number">05 / 05</span>
+                                <a
+                                    class="project-link"
+                                    href="https://github.com/donguinesjre-cpu/Data-Communocation.git"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Add the Data Communication repository URL to this link"
+                                >
+                                    View Repository <span>↗</span>
+                                </a>
                             </div>
 
                         </div>
@@ -1015,6 +1382,40 @@
                     rel="noopener noreferrer"
                 >
                     GitHub ↗
+                </a>
+
+                <a
+                    class="footer-social-link footer-facebook-link"
+                    href="https://www.facebook.com/share/19jCN3KJ43/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Facebook"
+                    title="Facebook"
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V21h3.4Z"/>
+                    </svg>
+                    <span>Facebook</span>
+                </a>
+
+                <a
+                    class="footer-social-link"
+                    href="https://www.instagram.com/geno_dngns?xtok=MW92NjNuMnp4YnNoaw=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Instagram"
+                    title="Instagram"
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3.5" y="3.5" width="17" height="17" rx="5"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <circle class="instagram-dot" cx="17.6" cy="6.8" r="1"/>
+                    </svg>
+                    <span>Instagram</span>
+                </a>
+
+                <a class="footer-replay" id="replayIntro" href="#home">
+                    Replay intro ↻
                 </a>
 
                 <a href="#home">
